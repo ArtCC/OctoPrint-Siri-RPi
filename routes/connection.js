@@ -15,9 +15,9 @@ router.get('/connect', async (req, res) => {
         URL_BASE + PATH_CONNECTION + API_KEY,
         { json: { command: 'connect' } },
         function (error, response, body) {
+            console.log(response);
             if (!error) {
-                console.log(response);
-                res.status(200);
+                res.status(200).send({ data: { result: 'Ok' } });
             } else {
                 res.status(500).send({ data: { result: 'Error: ' + err } });
             }
@@ -32,7 +32,7 @@ router.get('/disconnect', async (req, res) => {
         function (error, response, body) {
             console.log(response);
             if (!error) {
-                res.status(200);
+                res.status(200).send({ data: { result: 'Ok' } });
             } else {
                 res.status(500).send({ data: { result: 'Error: ' + err } });
             }

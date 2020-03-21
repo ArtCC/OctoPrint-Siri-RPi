@@ -18,15 +18,15 @@ router.get('/home', async (req, res) => {
         URL_BASE + PATH_HOME + API_KEY,
         { json: { command: 'home', axes: { 'x': 0, 'y': 0, 'z': 0 } } },
         function (error, response, body) {
+            console.log(response);
             if (!error) {
-                console.log(response);
                 // Bed
                 request.post(
                     URL_BASE + PATH_BED + API_KEY,
                     { json: { command: 'target', target: 60 } },
                     function (error, response, body) {
+                        console.log(response);
                         if (!error) {
-                            console.log(response);
                             // Tool
                             request.post(
                                 URL_BASE + PATH_TOOL + API_KEY,
@@ -34,7 +34,7 @@ router.get('/home', async (req, res) => {
                                 function (error, response, body) {
                                     console.log(response);
                                     if (!error) {
-                                        res.status(200);
+                                        res.status(200).send({ data: { result: 'Ok' } });
                                     } else {
                                         res.status(500).send({ data: { result: 'Error: ' + err } });
                                     }
@@ -57,8 +57,9 @@ router.get('/tool', async (req, res) => {
         URL_BASE + PATH_TOOL + API_KEY,
         { json: { command: 'target', targets: { 'tool0': 220 } } },
         function (error, response, body) {
+            console.log(response);
             if (!error) {
-                res.status(200);
+                res.status(200).send({ data: { result: 'Ok' } });
             } else {
                 res.status(500).send({ data: { result: 'Error: ' + err } });
             }
@@ -71,8 +72,9 @@ router.get('/bed', async (req, res) => {
         URL_BASE + PATH_BED + API_KEY,
         { json: { command: 'target', target: 60 } },
         function (error, response, body) {
+            console.log(response);
             if (!error) {
-                res.status(200);
+                res.status(200).send({ data: { result: 'Ok' } });
             } else {
                 res.status(500).send({ data: { result: 'Error: ' + err } });
             }
@@ -86,8 +88,8 @@ router.get('/cool', async (req, res) => {
         URL_BASE + PATH_BED + API_KEY,
         { json: { command: 'target', target: 0 } },
         function (error, response, body) {
+            console.log(response);
             if (!error) {
-                console.log(response);
                 // Tool
                 request.post(
                     URL_BASE + PATH_TOOL + API_KEY,
@@ -95,7 +97,7 @@ router.get('/cool', async (req, res) => {
                     function (error, response, body) {
                         console.log(response);
                         if (!error) {
-                            res.status(200);
+                            res.status(200).send({ data: { result: 'Ok' } });
                         } else {
                             res.status(500).send({ data: { result: 'Error: ' + err } });
                         }

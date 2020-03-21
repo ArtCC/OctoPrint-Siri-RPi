@@ -1,13 +1,35 @@
 {
-  "name": "octoprint-siri",
+  "name": "octoprint-siri-rpi",
   "version": "1.0.0",
   "description": "Use OctoPrint with Siri in HomeKit and Shortcuts with API REST in Raspberry Pi",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArtCC/Octoprint-Siri-RPi.git"
+  },
+  "keywords": [
+    "octoprint",
+    "siri",
+    "api",
+    "api-rest",
+    "printer",
+    "printer3d",
+    "ios",
+    "iphone",
+    "ipad",
+    "voice",
+    "siri-shortcuts",
+    "shortcuts",
+    "shortcut",
+    "nodejs",
+    "raspberry-pi",
+    "homepod"
+  ],
   "author": "Arturo Carretero Calvo",
-  "license": "ISC",
+  "license": "CC BY-NC-SA",
   "dependencies": {
     "express": "^4.17.1",
     "request": "^2.88.2"

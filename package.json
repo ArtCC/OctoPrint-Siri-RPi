@@ -1,0 +1,14 @@
+{
+  "name": "octoprint-siri",
+  "version": "1.0.0",
+  "description": "Use OctoPrint with Siri in HomeKit and Shortcuts with API REST in Raspberry Pi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arturo Carretero Calvo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

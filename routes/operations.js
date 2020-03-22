@@ -14,6 +14,8 @@ const {
 } = require('../config/config');
 
 router.get('/home', async (req, res) => {
+    var bed = req.query.bedTemp.match(/(\d+)/);
+    var tool = req.query.toolTemp.match(/(\d+)/);
     // Home
     request.post(
         URL_BASE + ip.address() + PATH_HOME + API_KEY,
@@ -24,14 +26,14 @@ router.get('/home', async (req, res) => {
                 // Bed
                 request.post(
                     URL_BASE + ip.address() + PATH_BED + API_KEY,
-                    { json: { command: 'target', target: req.query.bedTemp } },
+                    { json: { command: 'target', target: bed[0] } },
                     function (error, response, body) {
                         console.log(response);
                         if (!error) {
                             // Tool
                             request.post(
                                 URL_BASE + ip.address() + PATH_TOOL + API_KEY,
-                                { json: { command: 'target', targets: { 'tool0': req.query.toolTemp } } },
+                                { json: { command: 'target', targets: { 'tool0': tool[0] } } },
                                 function (error, response, body) {
                                     console.log(response);
                                     if (!error) {

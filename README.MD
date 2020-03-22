@@ -10,7 +10,7 @@ You will need a Raspberry Pi with OctoPrint and Node.js installed.
 
 After following my tutorial you will be able to control by voice and Siri your 3D printer.
 
-I'm an iOS developer in Madrid, Spain.
+I'm an iOS developer from Madrid, Spain.
 
 I hope you like the project, I'm open to all kind of help and modifications.
 
@@ -20,15 +20,11 @@ Arturo :)
 
 ### Configuration
 
-- Install OctoPrint in your Raspberry Pi:
+- Install and configure OctoPrint in your Raspberry Pi for your 3D printer:
 
 	- [OctoPrint official web](https://octoprint.org)
 
-- With OctoPrint installed and connected to your network, open your terminal on your MacBook (if you use Windows install Putty) and type:
-
-	- User for default: pi
-
-	- Password for default: raspberry
+- With OctoPrint installed and connected to your network, open your terminal on your MacBook (if you use Windows use [Putty](https://putty.org)) and type (User for default: <b>pi</b> and password for default: <b>raspberry</b>):
 
 ```
 ssh pi@OCTOPRINT_IP

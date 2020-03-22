@@ -24,14 +24,14 @@ router.get('/home', async (req, res) => {
                 // Bed
                 request.post(
                     URL_BASE + ip.address() + PATH_BED + API_KEY,
-                    { json: { command: 'target', target: 60 } },
+                    { json: { command: 'target', target: req.query.bedTemp } },
                     function (error, response, body) {
                         console.log(response);
                         if (!error) {
                             // Tool
                             request.post(
                                 URL_BASE + ip.address() + PATH_TOOL + API_KEY,
-                                { json: { command: 'target', targets: { 'tool0': 220 } } },
+                                { json: { command: 'target', targets: { 'tool0': req.query.toolTemp } } },
                                 function (error, response, body) {
                                     console.log(response);
                                     if (!error) {
@@ -56,7 +56,7 @@ router.get('/home', async (req, res) => {
 router.get('/tool', async (req, res) => {
     request.post(
         URL_BASE + ip.address() + PATH_TOOL + API_KEY,
-        { json: { command: 'target', targets: { 'tool0': 220 } } },
+        { json: { command: 'target', targets: { 'tool0': req.query.toolTemp } } },
         function (error, response, body) {
             console.log(response);
             if (!error) {
@@ -71,7 +71,7 @@ router.get('/tool', async (req, res) => {
 router.get('/bed', async (req, res) => {
     request.post(
         URL_BASE + ip.address() + PATH_BED + API_KEY,
-        { json: { command: 'target', target: 60 } },
+        { json: { command: 'target', target: req.query.bedTemp } },
         function (error, response, body) {
             console.log(response);
             if (!error) {

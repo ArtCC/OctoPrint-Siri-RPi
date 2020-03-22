@@ -26,14 +26,14 @@ router.get('/home', async (req, res) => {
                 // Bed
                 request.post(
                     URL_BASE + ip.address() + PATH_BED + API_KEY,
-                    { json: { command: 'target', target: bed[0] } },
+                    { json: { command: 'target', target: parseInt(bed[0]) } },
                     function (error, response, body) {
                         console.log(response);
                         if (!error) {
                             // Tool
                             request.post(
                                 URL_BASE + ip.address() + PATH_TOOL + API_KEY,
-                                { json: { command: 'target', targets: { 'tool0': tool[0] } } },
+                                { json: { command: 'target', targets: { 'tool0': parseInt(tool[0]) } } },
                                 function (error, response, body) {
                                     console.log(response);
                                     if (!error) {
@@ -56,9 +56,10 @@ router.get('/home', async (req, res) => {
 });
 
 router.get('/tool', async (req, res) => {
+    var tool = req.query.toolTemp.match(/(\d+)/);
     request.post(
         URL_BASE + ip.address() + PATH_TOOL + API_KEY,
-        { json: { command: 'target', targets: { 'tool0': req.query.toolTemp } } },
+        { json: { command: 'target', targets: { 'tool0': parseInt(tool[0]) } } },
         function (error, response, body) {
             console.log(response);
             if (!error) {
@@ -71,9 +72,10 @@ router.get('/tool', async (req, res) => {
 });
 
 router.get('/bed', async (req, res) => {
+    var bed = req.query.bedTemp.match(/(\d+)/);
     request.post(
         URL_BASE + ip.address() + PATH_BED + API_KEY,
-        { json: { command: 'target', target: req.query.bedTemp } },
+        { json: { command: 'target', target: parseInt(bed[0]) } },
         function (error, response, body) {
             console.log(response);
             if (!error) {

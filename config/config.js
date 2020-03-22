@@ -1,15 +1,15 @@
 'use strict';
 
 const API_KEY = '2D5E7779BCF944D8A003DD78DA7812A6';
-const URL_BASE = 'http://192.168.1.78/api/';
+const URL_BASE = 'http://';
 
 // Connection URL path
-const PATH_CONNECTION = 'connection?apikey=';
+const PATH_CONNECTION = '/api/connection?apikey=';
 
 // Operations URL path
-const PATH_HOME = 'printer/printhead?apikey=';
-const PATH_BED = 'printer/bed?apikey=';
-const PATH_TOOL = 'printer/tool?apikey=';
+const PATH_HOME = '/api/printer/printhead?apikey=';
+const PATH_BED = '/api/printer/bed?apikey=';
+const PATH_TOOL = '/api/printer/tool?apikey=';
 
 const API = {
     API_KEY,

@@ -8,7 +8,9 @@ const express = require('express'),
 const {
     API_KEY,
     URL_BASE,
-    PATH_JOB
+    PATH_JOB,
+    PATH_BED,
+    PATH_TOOL
 } = require('../config/config');
 
 router.get('/start', async (req, res) => {
@@ -33,7 +35,30 @@ router.get('/cancel', async (req, res) => {
         function (error, response, body) {
             console.log(response);
             if (!error) {
-                res.status(200).send({ data: { result: 'Ok' } });
+                // Bed
+                request.post(
+                    URL_BASE + ip.address() + PATH_BED + API_KEY,
+                    { json: { command: 'target', target: 0 } },
+                    function (error, response, body) {
+                        console.log(response);
+                        if (!error) {
+                            // Tool
+                            request.post(
+                                URL_BASE + ip.address() + PATH_TOOL + API_KEY,
+                                { json: { command: 'target', targets: { 'tool0': 0 } } },
+                                function (error, response, body) {
+                                    console.log(response);
+                                    if (!error) {
+                                        res.status(200).send({ data: { result: 'Ok' } });
+                                    } else {
+                                        res.status(500).send({ data: { result: 'Error: ' + error } });
+                                    }
+                                }
+                            );
+                        } else {
+                            res.status(500).send({ data: { result: 'Error: ' + err } });
+                        }
+                    })
             } else {
                 res.status(500).send({ data: { result: 'Error: ' + error } });
             }

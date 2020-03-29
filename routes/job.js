@@ -81,4 +81,24 @@ router.get('/pause', async (req, res) => {
     );
 });
 
+router.get('/time', async (req, res) => {
+    request.get(
+        URL_BASE + ip.address() + PATH_JOB + API_KEY,
+        function (error, response, body) {
+            if (!error) {
+                var json = JSON.parse(body);
+                const estimatedPrintTimeInSeconds = json.job.estimatedPrintTime;
+                if (estimatedPrintTimeInSeconds === null) {
+                    res.status(200).send({ data: { result: 'Off' } });
+                } else {
+                    const estimatedPrintTimeInHours = estimatedPrintTimeInSeconds / 3600;
+                    res.status(200).send({ data: { result: parseInt(estimatedPrintTimeInHours) } });
+                }
+            } else {
+                res.status(500).send({ data: { result: 'Error: ' + error } });
+            }
+        }
+    );
+});
+
 module.exports = router;

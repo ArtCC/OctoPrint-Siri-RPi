@@ -74,21 +74,23 @@ password: raspberry
 
 ## Siri shortcuts
 
-Add these shortcuts by opening the link on your iOS or iPadOS device where you have installed the Shortcuts application.
+Add these shortcuts by opening the link on your iOS or iPadOS device where you have installed the Shortcuts application. They are in Spanish but you can modify the texts when you add them to your application.
 
-[Connect](https://www.icloud.com/shortcuts/88d3e7128301484fb85d56716c3ee516)
+[Connect 3D printer to OctoPrint](https://www.icloud.com/shortcuts/88d3e7128301484fb85d56716c3ee516)
 
-[Disconnect](https://www.icloud.com/shortcuts/d4c31f58aa764f1f849bae93b6e21d3a)
+[Disconnect 3D printer from OctoPrint](https://www.icloud.com/shortcuts/d4c31f58aa764f1f849bae93b6e21d3a)
 
-[Home and temperature for tool and bed](https://www.icloud.com/shortcuts/a8fe578575614137981064f6e09e7457)
+[Home and temperature for tool and bed (Siri answer temperatures)](https://www.icloud.com/shortcuts/a8fe578575614137981064f6e09e7457)
 
 [Start impression](https://www.icloud.com/shortcuts/0f6ad76bd4fc4ce8a7e6d7cc3a01871c)
-
-[Cool](https://www.icloud.com/shortcuts/f227904de78f4d9d9d643f4d23972a77)
 
 [Cancel impression](https://www.icloud.com/shortcuts/69810f7769dc4bc88f6d13583b5fa853)
 
 [Pause impression](https://www.icloud.com/shortcuts/11f5f1f595da49389222a6d0d8bdae47)
+
+[Cool (tool and bed, cancel printer)](https://www.icloud.com/shortcuts/f227904de78f4d9d9d643f4d23972a77)
+
+[Estimated printer time in hours](https://www.icloud.com/shortcuts/6d6835890eca4f4983eb4ba4eb0869ec)
 
 ## Notes
 

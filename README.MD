@@ -91,8 +91,6 @@ This license lets others remix, tweak, and build upon your work without for comm
 
 ## THANK YOU!
 
-<a href="https://www.buymeacoffee.com/artcc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
-
 I hope you like it!
 
 ##### ArtCC 2020++

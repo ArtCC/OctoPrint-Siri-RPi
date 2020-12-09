@@ -1,8 +1,8 @@
 # Use OctoPrint with Siri and shortcuts with a Raspberry Pi and Node.js
 
-![OctoPrint logo](https://github.com/ArtCC/Octoprint-Siri-RPi/blob/develop/src_github/OctoPrint.png)
-![Plus](https://github.com/ArtCC/Octoprint-Siri-RPi/blob/develop/src_github/Plus.png)
-![Siri logo](https://github.com/ArtCC/Octoprint-Siri-RPi/blob/develop/src_github/Siri.png)
+![OctoPrint logo](https://github.com/ArtCC/Octoprint-Siri-RPi/blob/master/src_github/OctoPrint.png)
+![Plus](https://github.com/ArtCC/Octoprint-Siri-RPi/blob/master/src_github/Plus.png)
+![Siri logo](https://github.com/ArtCC/Octoprint-Siri-RPi/blob/master/src_github/Siri.png)
 
 (I'm sorry but I don't have a 3D printer anymore...)
 
@@ -78,7 +78,7 @@ password: raspberry
 
 Add these shortcuts by opening the link on your iOS or iPadOS device where you have installed the Shortcuts application. They are in Spanish but you can modify the texts when you add them to your application.
 
-[Download Shortcuts examples with captures](https://github.com/ArtCC/OctoPrint-Siri-RPi/blob/develop/src_github/Shortcuts_captures.zip)
+[Download Shortcuts examples with captures](https://github.com/ArtCC/OctoPrint-Siri-RPi/blob/master/src_github/Shortcuts_captures.zip)
 
 ## Notes
 

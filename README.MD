@@ -4,6 +4,8 @@
 ![Plus](https://github.com/ArtCC/Octoprint-Siri-RPi/blob/develop/src_github/Plus.png)
 ![Siri logo](https://github.com/ArtCC/Octoprint-Siri-RPi/blob/develop/src_github/Siri.png)
 
+(I'm sorry but I don't have a 3D printer anymore...)
+
 With this project you will be able to control your 3D printer if you use OctoPrint as a print server with Siri from your iOS, iPadOS, macOS or HomePod using the Apple Shortcuts.
 
 You will need a Raspberry Pi with OctoPrint and Node.js installed.
